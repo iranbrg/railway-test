@@ -12,4 +12,8 @@ app.get("/", async (req, res) => {
     res.status(200).json({ githubData: response.data });
 })
 
+app.get("/ping", async (req, res) => {
+    res.status(200).json({ message: "pong" });
+})
+
 app.listen(PORT, () => console.log(`Server's running at ${API_URL}`));
